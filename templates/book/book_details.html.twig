@@ -14,10 +14,13 @@
    </section>
 
    <section class="detail-image">
-
+        <p class="book-detail-title">{{ book.title }}</p>
         <img class="box-image" src="{{ book.picture }}" alt="fairy-picture">
         <div class="box-text">
-            <p class="details">Ife frf ref erg er ft  ref e fre fe<br>uihjihjhk</p>
+            <p class="details">Auteur : {{ book.author }}</p>
+            <p class="details">Genre : {{ book.genre }}</p>
+            <p class="details">Description : {{ book.description }}</p>
+            <p class="details">Commentaire : {{ book.comment }}</p>
         </div>
    </section>
    
