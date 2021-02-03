@@ -1,0 +1,21 @@
+{# This is the home page that will display the book details #}
+
+{% extends 'book/book_layout.html.twig' %}
+
+{% block body %}
+   <section class="img-background">
+        <div class="text-container">
+            <p>Salutations</p>
+            <p>Bienvenue sur mon site</p>
+            <p>qui propose des coups de coeur en littérature</p>
+        </div>
+   </section>
+
+   <section class="detail-image">
+        <img class="box-image" src="{{ asset('assets/images/oldboy.jpg') }}" alt="fairy-picture">
+        <div class="box-text">
+            <p class="details">Ife frf ref erg er ft  ref e fre fe<br>uihjihjhk</p>
+        </div>
+   </section>
+   
+{% endblock %}

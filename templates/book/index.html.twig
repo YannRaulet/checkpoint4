@@ -1,0 +1,46 @@
+{# This is the home page #}
+
+{% extends 'book/book_layout.html.twig' %}
+
+{% block body %}
+   <section class="img-background">
+        <div class="text-container">
+            <p>Salutations</p>
+            <p>Bienvenue sur mon site</p>
+            <p>qui propose des coups de coeur en littérature</p>
+        </div>
+   </section>
+
+   <section>
+      <div class="about-author">
+         <img class="fairy-picture" src="{{ asset('assets/images/fairy.jpg') }}" alt="fairy-picture">
+         <div class="about-text">
+               <p>A propos de l'auteur</p>
+               <p> Grand amateur de bandes dessinées, mangas, thrillers, heroï Fantasy et Science Fiction, 
+               j'aime partager mes coups de coeur, mes découvertes (récentes ou non d'ailleurs).
+               </p>
+         </div>
+      </div>
+   </section>
+
+   <section>
+      <div class="presentation">
+         <p class="presentation-text">Coups de coeur</p>
+         <div class="box-container">
+               <div class="box-1">
+                  <p class="details">Ife frf ref erg er ft  ref e fre fe</p>
+                  <button>read more</button>
+               </div>
+               <div class="box-2">
+                  <p class="details">Ife frf ref erg er ft  ref e fre fe</p>
+                  <button>read more</button>
+               </div>
+               <div class="box-3">
+                  <p class="details">Ife frf ref erg er ft  ref e fre fe</p>
+                  <button>read more</button>
+               </div>
+         </div>
+      </div>
+   </section>
+
+{% endblock %}
