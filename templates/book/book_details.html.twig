@@ -2,6 +2,8 @@
 
 {% extends 'book/book_layout.html.twig' %}
 
+{% block title %}Livre - {{ parent() }} {{ book.id }}{% endblock %}
+
 {% block body %}
    <section class="img-background">
         <div class="text-container">
@@ -12,10 +14,12 @@
    </section>
 
    <section class="detail-image">
-        <img class="box-image" src="{{ asset('assets/images/oldboy.jpg') }}" alt="fairy-picture">
+
+        <img class="box-image" src="{{ book.picture }}" alt="fairy-picture">
         <div class="box-text">
             <p class="details">Ife frf ref erg er ft  ref e fre fe<br>uihjihjhk</p>
         </div>
    </section>
    
 {% endblock %}
+  

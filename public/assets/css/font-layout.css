@@ -16,6 +16,16 @@ nav{
     padding: 0px 5px;
 }
 
+.logo {
+    color: #000000;
+    font-size: 22px;
+}
+
+.active {
+   font-weight: blod;
+   color:  #2d2a2a;
+}
+
 nav ul {
     display: flex;
 }

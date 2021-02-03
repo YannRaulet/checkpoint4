@@ -2,6 +2,8 @@
 
 {% extends 'book/book_layout.html.twig' %}
 
+{% block title %}Accueil - {{ parent() }} {% endblock %}
+
 {% block body %}
    <section class="img-background">
         <div class="text-container">
@@ -15,7 +17,7 @@
       <div class="about-author">
          <img class="fairy-picture" src="{{ asset('assets/images/fairy.jpg') }}" alt="fairy-picture">
          <div class="about-text">
-               <p>A propos de l'auteur</p>
+               <p>A propos de l'autheur</p>
                <p> Grand amateur de bandes dessinées, mangas, thrillers, heroï Fantasy et Science Fiction, 
                j'aime partager mes coups de coeur, mes découvertes (récentes ou non d'ailleurs).
                </p>
@@ -27,18 +29,13 @@
       <div class="presentation">
          <p class="presentation-text">Coups de coeur</p>
          <div class="box-container">
-               <div class="box-1">
-                  <p class="details">Ife frf ref erg er ft  ref e fre fe</p>
-                  <button>read more</button>
+            {% for book in books %}
+               <div class="boxs">
+                  <p class="book-title">{{ book.title }}</p>
+                  <img class="picture" src="{{ book.picture }}">
+                  <button><a href="{{ path('book_details', { id : book.id }) }}">Plus de détails</a></button>
                </div>
-               <div class="box-2">
-                  <p class="details">Ife frf ref erg er ft  ref e fre fe</p>
-                  <button>read more</button>
-               </div>
-               <div class="box-3">
-                  <p class="details">Ife frf ref erg er ft  ref e fre fe</p>
-                  <button>read more</button>
-               </div>
+            {% endfor %}
          </div>
       </div>
    </section>
