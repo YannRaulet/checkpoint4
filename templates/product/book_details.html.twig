@@ -5,13 +5,7 @@
 {% block title %}Livre - {{ parent() }} {{ book.id }}{% endblock %}
 
 {% block body %}
-   <section class="img-background">
-        <div class="text-container">
-            <p>Salutations</p>
-            <p>Bienvenue sur mon site</p>
-            <p>qui propose des coups de coeur en littérature</p>
-        </div>
-   </section>
+   <div class="img-background2"></div>
 
    <section class="detail-image">
         <p class="book-detail-title">{{ book.title }}</p>
@@ -25,4 +19,3 @@
    </section>
    
 {% endblock %}
-  

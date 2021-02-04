@@ -1,4 +1,4 @@
-{% extends 'base.html.twig' %}
+{% extends 'admin/admin_layout.html.twig' %}
 
 {% block title %}Book index{% endblock %}
 
@@ -29,8 +29,8 @@
                 <td>{{ book.comment }}</td>
                 <td>{{ book.picture }}</td>
                 <td>
-                    <a href="{{ path('book_show', {'id': book.id}) }}">show</a>
-                    <a href="{{ path('book_edit', {'id': book.id}) }}">edit</a>
+                    <a href="{{ path('admin_show', {'id': book.id}) }}">show</a>
+                    <a href="{{ path('admin_edit', {'id': book.id}) }}">edit</a>
                 </td>
             </tr>
         {% else %}
@@ -41,5 +41,5 @@
         </tbody>
     </table>
 
-    <a href="{{ path('book_new') }}">Create new</a>
+    <a href="{{ path('admin_new') }}">Create new</a>
 {% endblock %}
