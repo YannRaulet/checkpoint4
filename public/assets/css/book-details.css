@@ -13,16 +13,34 @@
 }
 
 .detail-image {
-    padding-top: 70px;
+    text-align: center;
+    padding: 0 20% 10% 20%;
 }
 
 .book-detail-title {
     font-weight: bold;
     color: #3e3d3d;
-    font-size: 60px;
-    margin-bottom: 150px;
+    font-size: 80px;
 }
 
+.grid-book {
+    display: grid;
+    grid-template-columns: 500px 500px;
+    grid-gap: 200px;
+}
+
+.box-text {
+    box-shadow: 2px 2px 12px rgba(0,0,0,0.3);
+    font-size: 20px;
+    padding: 2%;
+    border-radius: 10%;
+}
+
+.box-image  {
+    border-radius: 10%;
+}
+
+/*
 .box-image {
     width: 50%;
     height: auto;
@@ -43,3 +61,4 @@
     flex-direction: column;
     margin: auto;
 }
+*/

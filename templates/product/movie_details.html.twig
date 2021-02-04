@@ -6,7 +6,6 @@
 
 {% block body %}
    <div class="img-background3"></div>
-
     <section>
       <div class="about-author">
          <img class="fairy-picture" src="{{ asset('assets/images/ticket.jpg') }}" alt="fairy-picture">
@@ -18,12 +17,16 @@
 
    <section class="detail-image">
         <p class="movie-detail-title">{{ movie.title }}</p>
-        <img class="box-image" src="{{ movie.picture }}" alt="fairy-picture">
-        <div class="box-text">
-            <p class="details">Réalisateur : {{ movie.director }}</p>
-            <p class="details">Genre : {{ movie.genre }}</p>
-            <p class="details">Commentaire : {{ movie.comment }}</p>
+        <div class="grid-book">
+            <img class="box-image" src="{{ movie.picture }}" alt="fairy-picture">
+            <div class="box-text">
+                <p class="details">Réalisateur : {{ movie.director }}</p>
+                <p class="details">Acteurs : {{ movie.actor }}</p>
+                <p class="details">Genre : {{ movie.genre }}</p>
+                <p class="details">Synopsis : {{ movie.synopsis }}</p>
+                <p class="details">Commentaire : {{ movie.comment }}</p>
+            </div>
         </div>
    </section>
-   
+
 {% endblock %}

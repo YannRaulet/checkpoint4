@@ -5,24 +5,26 @@
 {% block title %}Livre - {{ book.title }}{% endblock %}
 
 {% block body %}
-   <div class="img-background2"></div>
    <section>
-      <div class="about-author">
-         <img class="fairy-picture" src="{{ asset('assets/images/painting.png') }}" alt="fairy-picture">
-         <div class="about-book-text">
-               <p>Coup de coeur en littérature</p>
-         </div>
-      </div>
-   </section>
-   <section class="detail-image">
-        <p class="book-detail-title">{{ book.title }}</p>
-        <img class="box-image" src="{{ book.picture }}" alt="fairy-picture">
-        <div class="box-text">
-            <p class="details">Auteur : {{ book.author }}</p>
-            <p class="details">Genre : {{ book.genre }}</p>
-            <p class="details">Description : {{ book.description }}</p>
-            <p class="details">Commentaire : {{ book.comment }}</p>
+    <div class="img-background2"></div>
+    <div class="about-author">
+        <img class="fairy-picture" src="{{ asset('assets/images/painting.png') }}" alt="fairy-picture">
+        <div class="about-book-text">
+            <p>Coup de coeur en littérature</p>
         </div>
-   </section>
+    </div>
+    </section>
+    <section class="detail-image">
+        <p class="book-detail-title">{{ book.title }}</p>
+        <div class="grid-book">
+            <img class="box-image" src="{{ book.picture }}" alt="fairy-picture">
+            <div class="box-text">
+                <p class="details">Auteur : {{ book.author }}</p>
+                <p class="details">Genre : {{ book.genre }}</p>
+                <p class="details">Description : {{ book.description }}</p>
+                <p class="details">Commentaire : {{ book.comment }}</p>
+            </div>
+        </div>
+    </section>
    
 {% endblock %}
