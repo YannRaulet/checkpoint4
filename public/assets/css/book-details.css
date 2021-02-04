@@ -6,6 +6,12 @@
     background-size: cover;
 }
 
+.about-book-text p {
+    color: #403e3e;
+    font-weight: bold;
+    font-size: 40px;
+}
+
 .detail-image {
     padding-top: 70px;
 }

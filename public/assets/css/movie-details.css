@@ -1,7 +1,13 @@
 .img-background3 {
     width: 100%;
     height: 95vh;
-    background-image:url("../images/chaplin.jpg");
+    background-image:url("../images/ticket.jpg");
     background-repeat: no-repeat;
     background-size: cover;
+}
+
+.about-movie-text p {
+    color: #403e3e;
+    font-weight: bold;
+    font-size: 40px;
 }
