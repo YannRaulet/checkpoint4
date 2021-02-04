@@ -1,43 +1,45 @@
-{# This is the home page #}
+{% extends 'base.html.twig' %}
 
-{% extends 'book/book_layout.html.twig' %}
-
-{% block title %}Accueil - {{ parent() }} {% endblock %}
+{% block title %}Book index{% endblock %}
 
 {% block body %}
-   <section class="img-background">
-        <div class="text-container">
-            <p>Salutations</p>
-            <p>Bienvenue sur mon site</p>
-            <p>qui propose des coups de coeur en littérature</p>
-        </div>
-   </section>
+    <h1>Book index</h1>
 
-   <section>
-      <div class="about-author">
-         <img class="fairy-picture" src="{{ asset('assets/images/fairy.jpg') }}" alt="fairy-picture">
-         <div class="about-text">
-               <p>A propos de l'auteur</p>
-               <p> Grand amateur de bandes dessinées, mangas, thrillers, heroï Fantasy et Science Fiction, 
-               j'aime partager mes coups de coeur, mes découvertes (récentes ou non d'ailleurs).
-               </p>
-         </div>
-      </div>
-   </section>
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Title</th>
+                <th>Author</th>
+                <th>Genre</th>
+                <th>Description</th>
+                <th>Comment</th>
+                <th>Picture</th>
+                <th>actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for book in books %}
+            <tr>
+                <td>{{ book.id }}</td>
+                <td>{{ book.title }}</td>
+                <td>{{ book.author }}</td>
+                <td>{{ book.genre }}</td>
+                <td>{{ book.description }}</td>
+                <td>{{ book.comment }}</td>
+                <td>{{ book.picture }}</td>
+                <td>
+                    <a href="{{ path('book_show', {'id': book.id}) }}">show</a>
+                    <a href="{{ path('book_edit', {'id': book.id}) }}">edit</a>
+                </td>
+            </tr>
+        {% else %}
+            <tr>
+                <td colspan="8">no records found</td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
 
-   <section>
-      <div class="presentation">
-         <p class="presentation-text">Coups de coeur</p>
-         <div class="box-container">
-            {% for book in books %}
-               <div class="boxs">
-                  <p class="book-title">{{ book.title }}</p>
-                  <img class="picture" src="{{ book.picture }}">
-                  <button><a href="{{ path('book_details', { id : book.id }) }}">Plus de détails</a></button>
-               </div>
-            {% endfor %}
-         </div>
-      </div>
-   </section>
-
+    <a href="{{ path('book_new') }}">Create new</a>
 {% endblock %}
