@@ -1,8 +1,8 @@
 {# This is the home page that will display the book details #}
 
-{% extends 'product/book_layout.html.twig' %}
+{% extends 'product/product_layout.html.twig' %}
 
-{% block title %}Livre - {{ parent() }} {{ book.id }}{% endblock %}
+{% block title %}Livre - {{ book.title }}{% endblock %}
 
 {% block body %}
    <div class="img-background2"></div>

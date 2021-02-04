@@ -1,0 +1,20 @@
+{# This is the home page that will display the movie details #}
+
+{% extends 'product/product_layout.html.twig' %}
+
+{% block title %}Film - {{ movie.title }}{% endblock %}
+
+{% block body %}
+   <div class="img-background3"></div>
+
+   <section class="detail-image">
+        <p class="movie-detail-title">{{ movie.title }}</p>
+        <img class="box-image" src="{{ movie.picture }}" alt="fairy-picture">
+        <div class="box-text">
+            <p class="details">Réalisateur : {{ movie.director }}</p>
+            <p class="details">Genre : {{ movie.genre }}</p>
+            <p class="details">Commentaire : {{ movie.comment }}</p>
+        </div>
+   </section>
+   
+{% endblock %}

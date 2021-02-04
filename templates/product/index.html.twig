@@ -1,15 +1,16 @@
 {# This is the home page #}
 
-{% extends 'product/book_layout.html.twig' %}
+{% extends 'product/product_layout.html.twig' %}
 
 {% block title %}Accueil - {{ parent() }} {% endblock %}
 
 {% block body %}
    <section class="img-background">
         <div class="text-container">
-            <p>Salutations</p>
-            <p>Bienvenue sur mon site</p>
-            <p>qui propose des coups de coeur en littérature</p>
+            <p>Bienvenue !!</p>
+            <p>Vous retrouverez sur ce site</p>
+            <p>des coups de coeur sur des oeuvres</p>
+            <p>en  littérature et cinéma</p>
         </div>
    </section>
 
@@ -18,7 +19,7 @@
          <img class="fairy-picture" src="{{ asset('assets/images/fairy.jpg') }}" alt="fairy-picture">
          <div class="about-text">
                <p>A propos de l'auteur</p>
-               <p> Grand amateur de bandes dessinées, mangas, thrillers, heroï Fantasy et Science Fiction, 
+               <p> Grand amateur de cinéma, de bandes dessinées, mangas, thrillers, heroï Fantasy et Science Fiction, 
                j'aime partager mes coups de coeur, mes découvertes (récentes ou non d'ailleurs).
                </p>
          </div>
@@ -26,14 +27,27 @@
    </section>
 
    <section>
-      <div class="presentation">
-         <p class="presentation-text">Coups de coeur</p>
+      <div class="presentation-book">
+         <p class="presentation-text">Coups de coeur littérature</p>
          <div class="box-container">
             {% for book in books %}
                <div class="boxs">
                   <p class="book-title">{{ book.title }}</p>
-                  <img class="picture" src="{{ book.picture }}">
-                  <button><a href="{{ path('product_details', { id : book.id }) }}">Plus de détails</a></button>
+                  <a href="{{ path('product_book_details', { id : book.id }) }}"><img class="picture" src="{{ book.picture }}"></a>
+               </div>
+            {% endfor %}
+         </div>
+      </div>
+   </section>
+
+      <section>
+      <div class="presentation-movie">
+         <p class="presentation-text">Coups de coeur cinéma</p>
+         <div class="box-container">
+            {% for movie in movies %}
+               <div class="boxs">
+                  <p class="book-title">{{ movie.title }}</p>
+                  <a href="{{ path('product_movie_details', { id : movie.id }) }}"><img class="picture" src="{{ movie.picture }}"></a>
                </div>
             {% endfor %}
          </div>

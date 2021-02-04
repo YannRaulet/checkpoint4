@@ -1,0 +1,7 @@
+.img-background3 {
+    width: 100%;
+    height: 95vh;
+    background-image:url("../images/chaplin.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
