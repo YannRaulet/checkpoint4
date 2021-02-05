@@ -12,8 +12,8 @@ Check composer is installed
 
 Install : 
 Clone this project
-Run composer install
-Create .env.local from the already existing .env file
+Run composer install, 
+Create .env.local from the already existing .env file, 
 Configure the DATABASE_URL with your information in .env.local file
 
 Built With : 
