@@ -19,8 +19,6 @@ Configure the DATABASE_URL with your information in .env.local file
 Built With : 
 Symfony
 
-Please read CONTRIBUTING.md for details on our code of conduct, and the process for submitting pull requests to us.
-
 Author : 
 Yann Raulet.
 
